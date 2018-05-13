@@ -224,11 +224,11 @@ class Site
     /**
      * Add departure
      *
-     * @param \AppBunble\Entity\Flight $departure
+     * @param \AppBundle\Entity\Flight $departure
      *
      * @return Site
      */
-    public function addDeparture(\AppBunble\Entity\Flight $departure)
+    public function addDeparture(\AppBundle\Entity\Flight $departure)
     {
         $this->departures[] = $departure;
 
@@ -238,9 +238,9 @@ class Site
     /**
      * Remove departure
      *
-     * @param \AppBunble\Entity\Flight $departure
+     * @param \AppBundle\Entity\Flight $departure
      */
-    public function removeDeparture(\AppBunble\Entity\Flight $departure)
+    public function removeDeparture(\AppBundle\Entity\Flight $departure)
     {
         $this->departures->removeElement($departure);
     }
