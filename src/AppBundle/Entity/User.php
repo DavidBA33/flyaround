@@ -44,9 +44,9 @@ class User
     private $phoneNumber;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
-     * @ORM\Column(name="birthDate", type="datetime")
+     * @ORM\Column(name="birthDate", type="date")
      */
     private $birthDate;
 
