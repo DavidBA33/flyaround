@@ -20,6 +20,7 @@ services:
             - { name: form.type, alias: app_user_registration }
 
 
+
     # makes classes in src/AppBundle available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     AppBundle\:

@@ -6,6 +6,8 @@ namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 
 
@@ -17,8 +19,13 @@ class RegistrationType extends AbstractType
         $builder->add('first_name');
         $builder->add('last_name');
         $builder->add('phoneNumber');
-        $builder->add('birthDate');
-        $builder->add('isACertifiedPilot');
+        $builder->add('birthDate',BirthdayType::class);
+        $builder->add('isACertifiedPilot', ChoiceType::class, array(
+        'choices' => array(
+            'Yes' => true,
+            'No' => false,
+        ),
+        ));
 
     }
 

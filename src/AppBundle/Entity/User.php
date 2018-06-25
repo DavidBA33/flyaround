@@ -27,21 +27,21 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="firstName", type="string", length=32)
+     * @ORM\Column(name="firstName", type="string", length=32, nullable=true)
      */
     private $firstName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lastName", type="string", length=32)
+     * @ORM\Column(name="lastName", type="string", length=32, nullable=true)
      */
     private $lastName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="phoneNumber", type="string", length=32)
+     * @ORM\Column(name="phoneNumber", type="string", length=32, nullable=true)
      */
     private $phoneNumber;
 
@@ -55,14 +55,14 @@ class User extends BaseUser
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="creationDate", type="datetime")
+     * @ORM\Column(name="creationDate", type="datetime",nullable=true)
      */
     private $creationDate;// à partir de là non
 
     /**
      * @var int
      *
-     * @ORM\Column(name="note", type="smallint")
+     * @ORM\Column(name="note", type="smallint",nullable=true)
      */
     private $note;
 
@@ -274,6 +274,7 @@ class User extends BaseUser
     {
         // return concatenated firstname and lastname, when __toString is called.
         return $this->firstName . " ". $this->lastName;
+
     }
 
     /**
